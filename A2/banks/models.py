@@ -12,4 +12,8 @@ class Bank(models.Model):
 
     def __str__(self):
         return self.name
+
+
+# class Branch(models.Model):
+
     
