@@ -14,6 +14,18 @@ class Bank(models.Model):
         return self.name
 
 
-# class Branch(models.Model):
+class Branch(models.Model):
+    bank = models.ForeignKey(Bank, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, null=False)
+    transit_number = models.CharField(max_length=100, null=False)
+    address = models.CharField(max_length=100, null=False)
+    email = models.EmailField(default='admin@utoronto.ca')
+    capacity = models.PositiveIntegerField(null=True)
+    last_modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.bank +"   "+ self.name
+
+
 
     
