@@ -23,8 +23,13 @@ class Branch(models.Model):
     capacity = models.PositiveIntegerField(null=True)
     last_modified = models.DateTimeField(auto_now=True)
 
+
     def __str__(self):
         return self.bank +"   "+ self.name
+    
+    #changes plural of the branch name in admin panel
+    class Meta:
+        verbose_name_plural = "Branch"
 
 
 
