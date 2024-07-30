@@ -1,5 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Hello world</h1>
+<h1>User Registration</h1>
+
+<form method="post">
+    <input type="text" name="username" placeholder="Enter Username">
+    <input type="text" name="first_name" placeholder="Enter First Name">
+    <input type="text" name="last_name" placeholder="Enter Last Name">
+    <input type="email" name="email" placeholder="Enter Email Address">
+    <input type="password" name="password1" placeholder="Type your password">
+    <input type="password" name="password2" placeholder="Confirm your password">
+    <button type="submit" name="button">Register User</button>
+</form>
 
 {% endblock %}
